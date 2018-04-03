@@ -1,0 +1,22 @@
+<form class="example-form">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Register Form</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Name" type="text" name="name" [(ngModel)]="registeredData.name" autocomplete="name">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" type="text" name="email" [(ngModel)]="registeredData.email" autocomplete="email">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" type="password" name="pwd" [(ngModel)]="registeredData.pwd" autocomplete="pwd">
+      </mat-form-field>
+    </mat-card-content>
+    <button mat-raised-button color="primary" (click)="post()">Register</button>
+
+  </mat-card>
+</form>

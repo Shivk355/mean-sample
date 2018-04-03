@@ -1,0 +1,9 @@
+<mat-toolbar>
+    <a routerLink="/">Mean Sample</a>
+    <button mat-button routerLink="/users">Users</button>
+    <span style="flex: 1 1 auto"></span>
+    <button mat-button routerLink="" *ngIf="authService.isAuthenticated != null" (click)="authService.logout()">Logout</button>
+    <button mat-button routerLink="/login" *ngIf="authService.isAuthenticated == null">Login</button>
+    <button mat-button routerLink="/register" *ngIf="authService.isAuthenticated == null">Register</button>
+</mat-toolbar>
+<router-outlet></router-outlet>
